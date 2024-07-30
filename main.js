@@ -13,9 +13,18 @@ app.get("/api/category", (req, res) => {
     res.json({
         message: "This is the API endpoint for categories.",
         data: {
-            categories: ["Electronics", "Clothing", "Books", ""]
+            categories: ["Electronics", "Clothing", "Books", "Course"]
         }
     });
+})
+
+app.get("/api/category", (req, res) => {
+    res.json({
+        message : "Этот апи заполняет категорию",
+        data : {
+            categories:["JS-Course", "PHP-course", "Java-course"]
+        }
+    })
 })
 app.listen(8080, () => {
     console.log('Server started on port 8080');
